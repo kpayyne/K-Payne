@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title> Welcome </title>
+        <style>
+        img {
+        height: 200px;
+        width: 200px;
+        }
+        </style>
+    </head>
+    <body>
+    
+	<script>
+    var choice = prompt("Which do you choose? 1, 2, or 3?")
+    
+    if (choice == "1")
+{
+    document.write("You chose Bulbasaur") 
+}
+    
+    
+	if (choice == "2")
+{
+    document.write("You chose Squirtle");
+}
+    if (choice == "3")
+{
+    document.write("You chose Charmander");
+}
+    </script>
+
+    
+
+    <h1> CONGRATS!</h1>
+        <div>
+            1)<img src="bulbasaur.png" onclick=bulbasaur()>
+			<div id="bulbasaur">Bulbasaur is a grass type</div>
+			 </div>
+		 
+		 <div>
+            2)<img src="squirtle.png" onclick=squirtle()>
+			<div id="squirtle">Squirtle is a water-type</div>
+			 </div>
+		 
+		 <div>
+
+            3)<img src="charmander.png" onclick=char()>
+			<div id="charmander">Charmander is a fire type</div>
+        </div>
+		
+     <script>
+function char() {
+    var x = document.getElementById("charmander");
+	document.getElementById("charmander").style.visibility = "visible";
+    document.getElementById("bulbasaur").style.visibility = "hidden";
+	document.getElementById("squirtle").style.visibility = "hidden";
+    
+}
+function squirtle() {
+    var x = document.getElementById("bulbasaur");
+    document.getElementById("charmander").style.visibility = "hidden";
+    document.getElementById("bulbasaur").style.visibility = "hidden";
+	document.getElementById("squirtle").style.visibility = "visible";
+	}
+	function bulbasaur() {
+    var x = document.getElementById("squirtle");
+	document.getElementById("charmander").style.visibility = "hidden";
+    document.getElementById("bulbasaur").style.visibility = "visible";
+	document.getElementById("squirtle").style.visibility = "hidden";
+   
+	}
+	</script>
+    <br />
+    <H3 id="out"></H3>
+    </body>
+</html>
